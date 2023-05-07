@@ -77,11 +77,7 @@ const styles = StyleSheet.create({
     color: '#431dcf',
     fontWeight: 'bold',
   },
-  usersText: {
-    marginBottom: 20,
-    textAlign: 'center',
-    
-  },
+  
   line: {
     height: 2,
     backgroundColor: 'gray',
