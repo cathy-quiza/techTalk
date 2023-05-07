@@ -47,6 +47,7 @@ export default class Login extends Component {
   }
 
 
+  //put some styling
   render() {
     return(
       <View style={GlobalStyle.loginCont}>
@@ -60,7 +61,7 @@ export default class Login extends Component {
             <Text style={GlobalStyle.errorText}>{this.state.errorMsg}</Text>
           </View>
         : null}
-
+          
         <TextInput 
           value={this.state.email}
           onChangeText={text => this.setState({ email: text })} 
