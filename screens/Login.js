@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
 import {UserAPI} from '../api/user';
 import { setStorage, getStorage } from '../helper/storage';
 
+
 import GlobalStyle from '../GlobalStyle';
 
 export default class Login extends Component {
@@ -50,29 +51,30 @@ export default class Login extends Component {
   //put some styling
   render() {
     return(
+      
       <View style={GlobalStyle.loginCont}>
         <Image
-          source={require('../appdevblog.png')} 
+          source={require('../techtalk.png')} 
           style={GlobalStyle.loginImg} />
-        <Text style={GlobalStyle.screenHeader}>Login to your Account</Text>
+        <Text style={GlobalStyle.screenHeader}>Welcome Back!</Text>
 
         {this.state.errorMsg ? 
           <View style={GlobalStyle.errorContainer}>
             <Text style={GlobalStyle.errorText}>{this.state.errorMsg}</Text>
           </View>
         : null}
-          
+        
         <TextInput 
           value={this.state.email}
           onChangeText={text => this.setState({ email: text })} 
           style={GlobalStyle.input} 
-          placeholder="email" />
+          placeholder="Email" />
 
         <TextInput 
           value={this.state.password}
           onChangeText={text => this.setState({ password: text })} 
           style={GlobalStyle.input} 
-          placeholder="password" 
+          placeholder="Password" 
           secureTextEntry={true}/>
 
         <TouchableOpacity onPress={() => this.login() }>
@@ -80,6 +82,8 @@ export default class Login extends Component {
             <Text style={GlobalStyle.buttonText}>Login</Text>
           </View>
         </TouchableOpacity>
+
+        <View style={GlobalStyle.line}></View> 
 
         
         <View style={GlobalStyle.footer}>

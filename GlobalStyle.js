@@ -15,17 +15,18 @@ const styles = StyleSheet.create({
   input: {
     borderBottomWidth: 1.5,
     borderBottomColor: 'black',
-    margin: 20
+    margin: 25,
+  
   },
   regInput: {
     borderBottomWidth: 1.5,
     borderBottomColor: 'black',
-    margin: 20
+    margin: 25
   },
   button: {
-    backgroundColor: 'blue',
+    backgroundColor: '#6602c4',
     padding: 15,
-    margin: 15,
+    margin: 25,
     borderRadius: 25,
   },
   buttonDanger: {
@@ -84,12 +85,19 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   registerText: {
-    color: 'blue',
+    color: '#431dcf',
     fontWeight: 'bold',
   },
   usersText: {
     marginBottom: 20,
     textAlign: 'center',
+    
+  },
+  line: {
+    height: 2,
+    backgroundColor: 'gray',
+    marginHorizontal: 25,
+    marginVertical: 20,
     
   },
 
