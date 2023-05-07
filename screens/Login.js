@@ -51,7 +51,7 @@ export default class Login extends Component {
   render() {
     return(
       
-      <View style={GlobalStyle.Container}>
+      <View style={GlobalStyle.container}>
         <Image
           source={require('../techtalk.png')} 
           style={GlobalStyle.loginImg} />

@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  Container: {
+  container: {
     justifyContent: 'center',
     flex: 1,
     backgroundColor: 'white',

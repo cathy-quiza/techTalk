@@ -47,7 +47,7 @@ export default class Register extends Component {
 
   render() {
     return(
-      <View style={GlobalStyle.Container}>
+      <View style={GlobalStyle.container}>
         
           <Image
             source={require('../svg.png')} 
