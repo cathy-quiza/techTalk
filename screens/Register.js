@@ -89,6 +89,8 @@ export default class Register extends Component {
             <Text style={GlobalStyle.buttonText}>Register</Text>
           </TouchableOpacity>
 
+          <View style={GlobalStyle.line}></View> 
+
           <View style={GlobalStyle.footer}>
             <Text style={GlobalStyle.footerText}>Already have an account? </Text>
             <TouchableOpacity
@@ -96,6 +98,7 @@ export default class Register extends Component {
                 <Text style={GlobalStyle.registerText}>Login</Text>
             </TouchableOpacity>
           </View>
+          
         </View>
       </View>
     );

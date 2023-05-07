@@ -100,7 +100,54 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     
   },
+  postContainer: {
+    backgroundColor: '#deace8',
+    padding: 10,
+    margin: 10,
+    borderRadius: 5,
+  },
+  postHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 5,
+  },
+  postAuthor: {
+    fontWeight: 'bold',
+  },
+  postTime: {
+    color: 'gray',
+  },
+  postText: {
+    lineHeight: 20,
+    marginBottom: 10,
+    marginLeft: 10,
+  },
+  headerText: {
+    textAlign: 'center',
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginTop: 40,
+    marginBottom: 45,
+  },
+  logoutButtonContainer: {
+    position: 'absolute',
+    top: 20,
+    right: 20,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#d12e36',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  logoutIcon: {
+    fontWeight: 'bold',
+    fontSize: 28,
+    color: 'white',
+  },
 
+  
+ 
 });
 
 export default styles;

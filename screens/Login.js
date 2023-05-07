@@ -30,7 +30,6 @@ export default class Login extends Component {
 
     if (res) {
       console.log('data: ', res);
-      console.log("Success");
       setStorage('user', res)
       this.props.navigation.navigate("Home");
       const user = await getStorage('user')
@@ -48,7 +47,7 @@ export default class Login extends Component {
   }
 
 
-  //put some styling
+
   render() {
     return(
       

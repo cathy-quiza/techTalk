@@ -45,7 +45,7 @@ export default class Home extends Component {
     
     const [res, error] = await postApi.createPost({post: this.state.postText})
     if (res){
-        console.log('postText: ', this.state.postText)
+        
         this.setState({postText: ''})
         console.log("response",res);
         let userData = await getStorage('user')
@@ -98,18 +98,29 @@ export default class Home extends Component {
       console.log("error");
     }
   }
+  renderPosts = () => {
+    return this.state.posts.map((post) => {
+      return (
+        <View style={GlobalStyle.postContainer} key={post.id}>
+          <View style={GlobalStyle.postHeader}>
+            <Text style={GlobalStyle.postAuthor}>{post.user.firstname} {post.user.lastname}</Text>
+            <Text style={GlobalStyle.postTime}>{this.formatTime(post.created_at)}</Text>
+          </View>
+          <Text style={GlobalStyle.postText}>{post.post}</Text>
+        </View>
+      );
+    });
+  };
 
 
 
   render() {
     return(
       
-      <View>
-        <Text>Home</Text>
-        <Text>Home</Text>
-        <Text>Home</Text>
+      <View style={{ flex: 1 }}>
+        <Text style={GlobalStyle.headerText}>Feeds</Text>
+    
         <View>
-
 
           <TextInput 
               value={this.state.postText}
@@ -120,41 +131,19 @@ export default class Home extends Component {
 
           <TouchableOpacity onPress={() => this.createPost() }>
             <View style={GlobalStyle.button}>
-              <Text style={GlobalStyle.buttonText}>Create Post</Text>
+              <Text style={GlobalStyle.buttonText}>Post</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.logout() }>
-              <View style={GlobalStyle.button}>
-                <Text style={GlobalStyle.buttonText}>Logout</Text>
-              </View>
-          </TouchableOpacity>
+
         </View>
-        <ScrollView>
+        <ScrollView>{this.renderPosts()}</ScrollView>
+        
+        <TouchableOpacity
+          style={GlobalStyle.logoutButtonContainer}
+          onPress={() => this.logout()}>
+          <Ionicons name="md-exit-outline" style={GlobalStyle.logoutIcon} />
+        </TouchableOpacity>
 
-          {
-            
-            this.state.posts.map((post)=>{
-              
-            
-
-              return(
-                  <View key= {post.id}>
-                    <Text>Name: {post.user.firstname} {post.user.lastname}</Text>
-                    <Text>{post.post}</Text>
-                    <Text>{this.formatTime(post.created_at)}</Text>
-                  </View>
-              )
-            })
-          }
-        </ScrollView>
-        <View>
-
-          
-          
-        </View>
-        <Text>Home</Text>
-        <Text>Home</Text>
-        <Text>Home</Text>
       </View>
       
     )
