@@ -1,27 +1,16 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  loginCont: {
+  Container: {
     justifyContent: 'center',
     flex: 1,
     backgroundColor: 'white',
   },
-  regContainer: {
-    justifyContent: 'center',
-    flex: 1,
-    backgroundColor: 'white',
-  },
-
+  
   input: {
     borderBottomWidth: 1.5,
     borderBottomColor: 'black',
     margin: 25,
-  
-  },
-  regInput: {
-    borderBottomWidth: 1.5,
-    borderBottomColor: 'black',
-    margin: 25
   },
   button: {
     backgroundColor: '#6602c4',

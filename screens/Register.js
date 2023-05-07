@@ -47,7 +47,7 @@ export default class Register extends Component {
 
   render() {
     return(
-      <View style={GlobalStyle.regContainer}>
+      <View style={GlobalStyle.Container}>
         
           <Image
             source={require('../svg.png')} 
@@ -61,13 +61,13 @@ export default class Register extends Component {
             value={this.state.firstname}
             onChangeText={text => {this.setState({ firstname: text })
             console.log(text)}}
-            style={GlobalStyle.regInput} 
+            style={GlobalStyle.input} 
             placeholder="First Name" />
 
           <TextInput 
             value={this.state.lastname}
             onChangeText={text => this.setState({ lastname: text })} 
-            style={GlobalStyle.regInput} 
+            style={GlobalStyle.input} 
             placeholder="Last Name" />
 
           
@@ -75,13 +75,13 @@ export default class Register extends Component {
           <TextInput 
             value={this.state.email}
             onChangeText={text => this.setState({ email: text })} 
-            style={GlobalStyle.regInput} 
+            style={GlobalStyle.input} 
             placeholder="Email" />
 
           <TextInput 
             value={this.state.password}
             onChangeText={text => this.setState({ password: text })} 
-            style={GlobalStyle.regInput} 
+            style={GlobalStyle.input} 
             placeholder="Password" 
             secureTextEntry={true}/>
 
@@ -98,7 +98,7 @@ export default class Register extends Component {
                 <Text style={GlobalStyle.registerText}>Login</Text>
             </TouchableOpacity>
           </View>
-          
+
         </View>
       </View>
     );

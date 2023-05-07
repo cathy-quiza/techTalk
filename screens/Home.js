@@ -126,7 +126,7 @@ export default class Home extends Component {
               value={this.state.postText}
               onChangeText={text => {this.setState({ postText: text })
               console.log(text)}}
-              style={GlobalStyle.regInput} 
+              style={GlobalStyle.input} 
               placeholder="Enter your Post" />
 
           <TouchableOpacity onPress={() => this.createPost() }>
